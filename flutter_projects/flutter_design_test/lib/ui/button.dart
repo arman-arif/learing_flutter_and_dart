@@ -13,8 +13,37 @@ class _ButtonHomeState extends State<ButtonHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Button Home"),
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.amberAccent,
+          ),
+          iconSize: 25,
+          onPressed: () {
+            // Not Implemented
+          },
+        ),
+        title: Text(
+          "Button Home",
+          style: TextStyle(
+            color: Colors.blue[100],
+            fontSize: 20,
+            fontStyle: FontStyle.italic,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         centerTitle: true,
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.settings,
+              color: Colors.amberAccent,
+            ),
+            iconSize: 25,
+            onPressed: () {},
+          )
+        ],
+        backgroundColor: Colors.transparent,
       ),
     );
   }
