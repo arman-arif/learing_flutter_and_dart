@@ -25,7 +25,14 @@ class _HomeState extends State<Home> {
             children: [
               Container(
                 height: 200,
-                color: Colors.lightBlue,
+                width: 190,
+                decoration: BoxDecoration(
+                    color: Colors.lightBlue,
+                    borderRadius: BorderRadius.circular(15),
+                    border: Border.all(
+                      color: Colors.blueGrey,
+                      width: 5,
+                    )),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -45,16 +52,14 @@ class _HomeState extends State<Home> {
                 decoration: BoxDecoration(
                     color: Colors.green,
                     borderRadius: BorderRadius.circular(50)),
-                height: 50,
-                width: 295,
+                height: 40,
+                width: 220,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Text("Dhaka"),
                     Text("Khulna"),
                     Text("Chittagong"),
-                    Text("Barisal"),
-                    Text("Rajshahi"),
                   ],
                 ),
               ),
