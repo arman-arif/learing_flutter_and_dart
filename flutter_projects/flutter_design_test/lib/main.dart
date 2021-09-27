@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_design_test/ui/home.dart';
-import 'ui/button.dart';
+// import 'package:flutter_design_test/home.dart';
+import 'button.dart';
 
 void main() {
   runApp(MyApp());
