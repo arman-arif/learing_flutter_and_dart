@@ -26,7 +26,7 @@ class _ButtonHomeState extends State<ButtonHome> {
         title: Text(
           "Button Home",
           style: TextStyle(
-            color: Colors.blue[100],
+            color: Colors.teal.shade50,
             fontSize: 20,
             fontStyle: FontStyle.italic,
             fontWeight: FontWeight.bold,
