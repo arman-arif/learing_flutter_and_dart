@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_design_test/home.dart';
 // import 'button.dart';
-import 'editprofile.dart';
+// import 'editprofile.dart';
+import 'editprofile2.dart';
 
 void main() {
   runApp(MyApp());
