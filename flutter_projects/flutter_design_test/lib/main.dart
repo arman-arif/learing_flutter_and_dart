@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_design_test/home.dart';
-import 'button.dart';
+// import 'button.dart';
+import 'editprofile.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: ButtonHome(),
+      home: EditProfile(),
     );
   }
 }
