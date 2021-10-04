@@ -92,8 +92,11 @@ class _ProfilePageState extends State<ProfilePage> {
                 Container(
                   height: 100,
                   width: 350,
-                  padding: EdgeInsets.symmetric(horizontal: 30),
-                  decoration: BoxDecoration(),
+                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  margin: EdgeInsets.symmetric(horizontal: 20),
+                  decoration: BoxDecoration(
+                      color: Colors.green.shade50,
+                      borderRadius: BorderRadius.circular(15)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -108,7 +111,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                           shape: BoxShape.circle,
                           image: DecorationImage(
-                            image: AssetImage('images/profile-image-1.jpg'),
+                            image: AssetImage('images/profile-image-2.jpeg'),
                             fit: BoxFit.fill,
                           ),
                         ),
@@ -118,7 +121,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Elena D'suza",
+                            "Ryan Arav",
                             style: TextStyle(
                               fontSize: 25,
                               fontWeight: FontWeight.w500,
