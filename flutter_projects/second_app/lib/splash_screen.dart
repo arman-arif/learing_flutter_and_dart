@@ -16,14 +16,29 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Align(
         alignment: Alignment.center,
         child: Container(
-          width: 350,
-          height: 250,
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height / 1.5,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
-                width: 350,
-                height: 150,
+                width: MediaQuery.of(context).size.width - 100,
+                height: MediaQuery.of(context).size.height / 3,
+                decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(15),
+                    image: DecorationImage(
+                      image: AssetImage('images/splash_screen_image.png'),
+                      fit: BoxFit.fill,
+                    ),
+                    border: Border.all(
+                      width: 3,
+                      color: Color.fromRGBO(0, 125, 255, 1),
+                    )),
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width / 1.2,
+                height: MediaQuery.of(context).size.height / 4,
                 padding: EdgeInsets.symmetric(horizontal: 30),
                 child: Text(
                   "Welcome to Flutter Advance Design, ICT Division - Flutter Training",
