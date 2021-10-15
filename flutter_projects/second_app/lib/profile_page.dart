@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:second_app/splash_screen.dart';
 import 'package:second_app/edit_profile.dart';
+import 'package:second_app/splash_screen.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key key}) : super(key: key);
@@ -15,17 +15,43 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "Profile Page",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-            fontWeight: FontWeight.w600,
+        actions: [
+          RaisedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => EditPage(),
+                ),
+              );
+            },
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(3),
+              side: BorderSide(
+                width: 2,
+                color: Colors.white,
+                style: BorderStyle.solid,
+              ),
+            ),
+            padding: EdgeInsets.symmetric(horizontal: 5, vertical: 3),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Icon(
+                  Icons.create,
+                  size: 18,
+                  color: Colors.white70,
+                ),
+                Text(
+                  "Edit",
+                  style: TextStyle(
+                    color: Colors.white70,
+                  ),
+                )
+              ],
+            ),
           ),
-          textAlign: TextAlign.center,
-        ),
-        backgroundColor: Color.fromRGBO(29, 90, 141, 1),
-        centerTitle: true,
+        ],
         leading: IconButton(
           onPressed: () {
             Navigator.push(
@@ -35,66 +61,9 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
             );
           },
-          icon: Icon(Icons.home_filled),
-          iconSize: 30,
+          icon: Icon(Icons.arrow_back_ios_rounded),
+          iconSize: 25,
           color: Colors.white70,
-        ),
-        actions: [
-          Container(
-            margin: EdgeInsets.only(
-              right: 10,
-            ),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(
-                vertical: 7,
-              ),
-              child: FlatButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => EditPage(),
-                    ),
-                  );
-                },
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(7),
-                  side: BorderSide(
-                    color: Color.fromRGBO(255, 255, 255, 0.5),
-                    width: 3,
-                  ),
-                ),
-                color: Color.fromRGBO(255, 255, 255, 0.2),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Text(
-                      "Edit",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white70,
-                      ),
-                    ),
-                    Icon(
-                      Icons.create_rounded,
-                      size: 20,
-                      color: Colors.white70,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
-      body: Center(
-        child: Text(
-          "This is Profile Page",
-          style: TextStyle(
-            fontSize: 35,
-            fontWeight: FontWeight.w600,
-            color: Color.fromRGBO(225, 50, 100, 1),
-          ),
         ),
       ),
     );
