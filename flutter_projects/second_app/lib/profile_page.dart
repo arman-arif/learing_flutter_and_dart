@@ -3,6 +3,10 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:second_app/edit_profile.dart';
+import 'package:second_app/followers_page.dart';
+import 'package:second_app/following_page.dart';
+import 'package:second_app/message_page.dart';
+import 'package:second_app/posts_page.dart';
 import 'package:second_app/splash_screen.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -17,6 +21,7 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(52, 152, 219, 0.9),
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -29,7 +34,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                 );
               },
-              color: Colors.blue.shade700,
+              color: Color.fromRGBO(41, 128, 185, 1.0),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(7),
                 side: BorderSide(
@@ -62,6 +67,7 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
           ),
         ],
+        title: Text("Profile Page"),
         leading: IconButton(
           onPressed: () {
             Navigator.push(
@@ -94,7 +100,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         margin: EdgeInsets.only(right: 20),
                         decoration: BoxDecoration(
                           border: Border.all(
-                              color: Colors.orange.shade900,
+                              color: Color.fromRGBO(52, 152, 219, 1.0),
                               style: BorderStyle.solid,
                               width: 2),
                           borderRadius: BorderRadius.circular(7),
@@ -117,7 +123,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                 fontSize: 22,
-                                color: Colors.black,
+                                color: Color.fromRGBO(41, 128, 185, 1.0),
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
@@ -125,7 +131,8 @@ class _ProfilePageState extends State<ProfilePage> {
                               width: MediaQuery.of(context).size.width - 170,
                               child: Text(
                                 'National Parliament House, Sher-e-Bangla Nagar, Dhaka',
-                                style: TextStyle(color: Colors.black54),
+                                style: TextStyle(
+                                    color: Color.fromRGBO(52, 152, 219, 1.0)),
                               ),
                             ),
                           ],
@@ -143,13 +150,16 @@ class _ProfilePageState extends State<ProfilePage> {
                           Text(
                             'Bio',
                             style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.w600),
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Color.fromRGBO(41, 128, 185, 1.0)),
                           ),
                           Padding(
                             padding: EdgeInsets.only(left: 8.0),
                             child: Icon(
                               Icons.info_outline,
                               size: 15,
+                              color: Color.fromRGBO(41, 128, 185, 1.0),
                             ),
                           ),
                         ],
@@ -178,6 +188,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                     child: Icon(
                                       Icons.calendar_today_rounded,
                                       size: 20,
+                                      color: Color.fromRGBO(41, 128, 185, 1.0),
                                     ),
                                   ),
                                   Padding(
@@ -185,8 +196,11 @@ class _ProfilePageState extends State<ProfilePage> {
                                     child: Text(
                                       'Born:',
                                       style: TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w600),
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w600,
+                                        color:
+                                            Color.fromRGBO(41, 128, 185, 1.0),
+                                      ),
                                     ),
                                   ),
                                   Text('September 28, 1947 (age 75 years)'),
@@ -202,6 +216,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                     child: Icon(
                                       Icons.person_outline,
                                       size: 20,
+                                      color: Color.fromRGBO(41, 128, 185, 1.0),
                                     ),
                                   ),
                                   Padding(
@@ -209,6 +224,8 @@ class _ProfilePageState extends State<ProfilePage> {
                                     child: Text(
                                       'Spouse:',
                                       style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(41, 128, 185, 1.0),
                                           fontSize: 14,
                                           fontWeight: FontWeight.w600),
                                     ),
@@ -226,6 +243,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                     child: Icon(
                                       Icons.my_library_books_outlined,
                                       size: 20,
+                                      color: Color.fromRGBO(41, 128, 185, 1.0),
                                     ),
                                   ),
                                   Padding(
@@ -233,6 +251,8 @@ class _ProfilePageState extends State<ProfilePage> {
                                     child: Text(
                                       'Writings:',
                                       style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(41, 128, 185, 1.0),
                                           fontSize: 14,
                                           fontWeight: FontWeight.w600),
                                     ),
@@ -270,6 +290,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                     child: Icon(
                                       Icons.group_outlined,
                                       size: 20,
+                                      color: Color.fromRGBO(41, 128, 185, 1.0),
                                     ),
                                   ),
                                   Padding(
@@ -277,6 +298,8 @@ class _ProfilePageState extends State<ProfilePage> {
                                     child: Text(
                                       'Children:',
                                       style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(41, 128, 185, 1.0),
                                           fontSize: 14,
                                           fontWeight: FontWeight.w600),
                                     ),
@@ -294,6 +317,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                     child: Icon(
                                       Icons.menu_book_rounded,
                                       size: 20,
+                                      color: Color.fromRGBO(41, 128, 185, 1.0),
                                     ),
                                   ),
                                   Padding(
@@ -301,6 +325,8 @@ class _ProfilePageState extends State<ProfilePage> {
                                     child: Text(
                                       'Education:',
                                       style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(41, 128, 185, 1.0),
                                           fontSize: 14,
                                           fontWeight: FontWeight.w600),
                                     ),
@@ -338,6 +364,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                     child: Icon(
                                       Icons.collections_bookmark_rounded,
                                       size: 20,
+                                      color: Color.fromRGBO(41, 128, 185, 1.0),
                                     ),
                                   ),
                                   Padding(
@@ -345,6 +372,8 @@ class _ProfilePageState extends State<ProfilePage> {
                                     child: Text(
                                       'Awards:',
                                       style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(41, 128, 185, 1.0),
                                           fontSize: 14,
                                           fontWeight: FontWeight.w600),
                                     ),
@@ -387,7 +416,13 @@ class _ProfilePageState extends State<ProfilePage> {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 RaisedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => MessagePage()),
+                                    );
+                                  },
                                   child: Row(
                                     children: [
                                       Padding(
@@ -409,8 +444,50 @@ class _ProfilePageState extends State<ProfilePage> {
                                     ),
                                   ),
                                 ),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
                                 RaisedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => FollowersPage(),
+                                      ),
+                                    );
+                                  },
+                                  child: Row(
+                                    children: [
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(right: 8.0),
+                                        child: Icon(
+                                          Icons.people_alt_outlined,
+                                          size: 20,
+                                        ),
+                                      ),
+                                      Text("Followers"),
+                                    ],
+                                  ),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(50),
+                                    side: BorderSide(
+                                      width: 2,
+                                      color: Colors.black54,
+                                    ),
+                                  ),
+                                ),
+                                RaisedButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => FollowingPage(),
+                                      ),
+                                    );
+                                  },
                                   child: Row(
                                     children: [
                                       Padding(
@@ -421,7 +498,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                           size: 20,
                                         ),
                                       ),
-                                      Text("Followers"),
+                                      Text("Following"),
                                     ],
                                   ),
                                   shape: RoundedRectangleBorder(
@@ -438,7 +515,13 @@ class _ProfilePageState extends State<ProfilePage> {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 RaisedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => PostPage()),
+                                    );
+                                  },
                                   child: Row(
                                     children: [
                                       Padding(
