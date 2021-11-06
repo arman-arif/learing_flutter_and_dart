@@ -60,7 +60,21 @@ class _MessagePageState extends State<MessagePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Message Page"),
-        actions: [],
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => MessagePage(),
+                ),
+              );
+            },
+            icon: Icon(Icons.refresh_rounded),
+            iconSize: 25,
+            color: Colors.white70,
+          ),
+        ],
         leading: IconButton(
           onPressed: () {
             Navigator.push(
@@ -113,9 +127,9 @@ class _MessagePageState extends State<MessagePage> {
             ),
             Padding(
               padding: const EdgeInsets.only(
-                top: 15,
+                top: 25,
                 left: 5,
-                bottom: 20,
+                bottom: 10,
               ),
               child: Text(
                 'Messages',
