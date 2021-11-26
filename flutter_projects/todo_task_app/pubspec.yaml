@@ -23,11 +23,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
+  cloud_firestore: ^0.14.0+2
+  firebase_auth: ^0.18.0
+  google_fonts: ^0.7.0+1
+  image_picker: ^0.6.7+12
 
 dev_dependencies:
   flutter_test:
@@ -45,9 +45,50 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
+  assets:
+    - assets/
+    - assets/images/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+
+  # To add additional plugins to your application, add a plugin section,
+  # like this:
+  # plugins:
+  #   - path_provider
+  #   - shared_preferences
+  #   - flutter_local_notifications
+  #   - flutter_plugin_android_lifecycle
+  #   - flutter_plugin_android_alarm_manager
+  #   - flutter_plugin_android_permissions
+  #   - flutter_plugin_android_intent
+  #   - flutter_plugin_android_firebase_auth
+  #   - flutter_plugin_android_firebase_core
+  #   - flutter_plugin_android_firebase_storage
+  #   - flutter_plugin_android_firebase_database
+  #   - flutter_plugin_android_firebase_remote_config
+  #   - flutter_plugin_android_firebase_messaging
+  #   - flutter_plugin_android_firebase_analytics
+  #   - flutter_plugin_android_firebase_crashlytics
+  #   - flutter_plugin_android_firebase_performance
+  #   - flutter_plugin_android_firebase_admob
+  #   - flutter_plugin_android_firebase_remote_config
+  #   - flutter_plugin_android_firebase_in_app_messaging
+  #   - flutter_plugin_android_firebase_performance
+  #   - flutter_plugin_android_firebase_auth_facebook
+  #   - flutter_plugin_android_firebase_auth_google
+  #   - flutter_plugin_android_firebase_auth_twitter
+  #   - flutter_plugin_android_firebase_auth_github
+  #   - flutter_plugin_android_firebase_auth_apple
+  #   - flutter_plugin_android_firebase_auth_anonymous
+  #   - flutter_plugin_android_firebase_auth_phone
+  #   - flutter_plugin_android_firebase_auth_email
+  #   - flutter_plugin_android_firebase_auth_email_link
+  #   - flutter_plugin_android_firebase_auth_phone_number
+  #   - flutter_plugin_android_firebase_auth_email_password
+  #   - flutter_plugin_android_firebase_auth_email_link_password
+  #   - flutter_plugin_android_firebase_auth_phone_number_password
+
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
